@@ -56,7 +56,7 @@ export function FileUpload({ namespace }) {
         description: `${e}`,
       })
     }
-  }, [files])
+  }, [files, namespace])
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,

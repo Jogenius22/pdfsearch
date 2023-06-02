@@ -47,7 +47,7 @@ export function DocumentQA({ namespace }) {
           ]
         : []),
     ]
-  }, [messages, answerStream, pendingSourceDocs])
+  }, [messages, answerStream, userQuestion, pendingSourceDocs])
 
   const aiAnswer = chatMessages.filter(
     (message) => message.type === "apiMessage"

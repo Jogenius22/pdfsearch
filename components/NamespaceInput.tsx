@@ -34,7 +34,7 @@ export function NamespaceSelector({ newNamespace, onNamespaceSelect }) {
     <div className="flex flex-col items-center gap-3 md:flex-row">
       <div className=" flex flex-col gap-1.5">
         <Label className=" mb-[1.75px]" htmlFor="namespace">
-          namespace
+          Namespace
         </Label>
 
         <Input
@@ -46,7 +46,7 @@ export function NamespaceSelector({ newNamespace, onNamespaceSelect }) {
 
       <div className="flex flex-col gap-1.5">
         <Label className=" mb-[1.75px]" htmlFor="namespace">
-          previous
+          Previous Data
         </Label>
 
         <Select onValueChange={handleDropdownChange}>

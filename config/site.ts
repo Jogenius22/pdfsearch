@@ -11,11 +11,11 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "Mercury",
+  name: "Jogenius",
   description: "Unlock the secrets of any website",
   mainNav: [],
   links: {
-    twitter: "https://twitter.com/nolansym",
-    github: "https://github.com/Jordan-Gilliam/ai-template",
+    twitter: "https://fiverr.com/genius_ai",
+    github: "https://github.com/jogenius22",
   },
 }

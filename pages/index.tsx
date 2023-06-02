@@ -96,7 +96,7 @@ export default function Pinecone() {
                 )}
                 onClick={() => setEmbedding("QUERY")}
               >
-                <ToggleHeading text="QUERY" embedding={embedding} />
+                <ToggleHeading text="CHAT" embedding={embedding} />
               </button>
             </div>
           </div>
