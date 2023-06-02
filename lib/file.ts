@@ -1,3 +1,4 @@
+import { Writable } from "stream"
 import type { NextApiRequest } from "next"
 import formidable from "formidable"
 import { Document } from "langchain/document"
@@ -5,7 +6,6 @@ import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
 import mammoth from "mammoth"
 import { NodeHtmlMarkdown } from "node-html-markdown"
 import pdfParse from "pdf-parse"
-import { Writable } from "stream"
 import Tesseract from "tesseract.js"
 
 const formidableConfig = {
@@ -49,9 +49,9 @@ export const formidablePromise = (
   })
 }
 
-export const fileConsumer = <T = unknown>(acc: T[]) => {
+export const fileConsumer = <T = Buffer>(acc: T[]) => {
   const writable = new Writable({
-    write: (chunk, _enc, next) => {
+    write: (chunk: T, _enc, next) => {
       acc.push(chunk)
       next()
     },
@@ -119,7 +119,8 @@ const convertFileToString = async (file: formidable.File, chunks) => {
 }
 
 export const getFileText = async (req: NextApiRequest) => {
-  const chunks: never[] = []
+  const chunks: Buffer[] = []
+
   const { fields, files } = await formidablePromise(req, {
     ...formidableConfig,
     // consume this, otherwise formidable tries to save the file to disk
