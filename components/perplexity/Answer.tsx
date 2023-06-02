@@ -53,7 +53,7 @@ export function AnswerMessage({ submittedQ, isCurrentAnswer, content, error }) {
         <div className="flex items-center">
           <Icons.arrowDR className="h-6 w-6 text-indigo-600 dark:text-teal-400" />
           <p className="font-aboreto text-sm font-bold leading-tight tracking-wide text-indigo-600 dark:text-teal-400">
-            MERCURIAL
+            Genius AI
           </p>
         </div>
         <div className="w-full md:w-[750px]">
